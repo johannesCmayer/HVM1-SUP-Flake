@@ -7,13 +7,13 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hvm-git = {
+    hvm1-sup-git = {
       url = "github:HigherOrderCO/HVM1/dup_labels";
       flake = false;
     };
   };
 
-  outputs = { self, nixpkgs, rust-overlay, hvm-git }:
+  outputs = { self, nixpkgs, rust-overlay, hvm1-sup-git }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
       forEachSupportedSystem = f: nixpkgs.lib.genAttrs supportedSystems (system: f {
@@ -22,11 +22,12 @@
     in
     {
       packages = forEachSupportedSystem ({ pkgs }: rec {
-        hvm1_git = pkgs.rustPlatform.buildRustPackage rec {
+        default = hvm1-sup
+        hvm1-sup = pkgs.rustPlatform.buildRustPackage rec {
           pname = "hvm1-sup";
           version = "1.0.16";
 
-          src = hvm-git;
+          src = hvm1-sup-git;
           cargoHash = "sha256-W7tniTFmzFS3AdEdQyqBDoV1w6PzdIu4iv66PGaQUHQ=";
           doCheck = true;
 
