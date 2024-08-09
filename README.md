@@ -1,4 +1,4 @@
-# HVM1 Flake
+# HVM1 SUP Flake
 This repo provides an easy way to use an HVM1 version from the dup_labels branch. Note that HVM1 is deprecated in favor of [HVM2](https://github.com/HigherOrderCO/HVM/tree/main) and [bend](https://github.com/HigherOrderCO/Bend). The only reason to use it is to experiment with lazy SUP nodes. See 
 - [Fast Discrete Program Search with HVM Superpositions (SUP nodes) - finding ADD-CARRY](https://gist.github.com/VictorTaelin/d5c318348aaee7033eb3d18b0b0ace34)
 - [Solving SAT via interaction net superpositions](https://gist.github.com/VictorTaelin/9061306220929f04e7e6980f23ade615)
