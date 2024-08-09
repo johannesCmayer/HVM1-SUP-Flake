@@ -8,6 +8,13 @@ Usage:
 2. Get a shell with hvm1 with SUP labels available via `nix --experimental-features 'nix-command flakes' shell github:johannesCmayer/HVM1-SUP-Flake`.
 3. Use HVM, e.g. `hvm1 run -t 1 "(+ 2 3)"` or `hvm1 run -d true -t 1 "(+ 2 3)"` to see all reduction steps.
 
+Try the example on the first page of [An Algorithm for Optimal Lambda Calculus Reduction](https://dl.acm.org/doi/10.1145/96709.96711) to see the optimal reduction with dup nodes in action:
+```
+hvm1 run -d true -t 1 "((λg (g(g(λx x))))
+                        (λh ((λf (f(f(λz z))))
+                             (λw (h(w(λy y)))))))"
+```
+
 `-t 1` makes HVM use a single thread (There is a bug in the parallizer of HVM).
 
 See the [HVM1 guide](https://github.com/HigherOrderCO/HVM1/blob/dup_labels/guide/HOW.md) for more (have GPT read it and then try to understand the source code [here](https://gist.github.com/VictorTaelin/d5c318348aaee7033eb3d18b0b0ace34) by asking questions).
