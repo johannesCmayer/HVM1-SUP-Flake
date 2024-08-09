@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "hvm-git": {
+    "hvm1-sup-git": {
       "flake": false,
       "locked": {
         "lastModified": 1723052112,
@@ -33,7 +33,7 @@
     },
     "root": {
       "inputs": {
-        "hvm-git": "hvm-git",
+        "hvm1-sup-git": "hvm1-sup-git",
         "nixpkgs": "nixpkgs",
         "rust-overlay": "rust-overlay"
       }

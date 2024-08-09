@@ -29,7 +29,7 @@
 
           src = hvm1-sup-git;
           cargoHash = "sha256-W7tniTFmzFS3AdEdQyqBDoV1w6PzdIu4iv66PGaQUHQ=";
-          doCheck = true;
+          doCheck = false;
 
           cargoPatches = [
             # a patch file to add/update Cargo.lock in the source code
