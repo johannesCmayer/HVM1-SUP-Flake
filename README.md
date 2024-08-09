@@ -4,7 +4,7 @@ This repo provides an easy way to use an HVM1 version from the dup_labels branch
 - [Solving SAT via interaction net superpositions](https://gist.github.com/VictorTaelin/9061306220929f04e7e6980f23ade615)
 
 Usage:
-1. Install Nix.
+1. [Install Nix](https://nixos.org/download/).
 2. Get a shell with hvm1 with SUP labels available via `nix shell github:johannesCmayer/HVM1-SUP-Flake`.
 3. Use hvm, e.g. `hvm1 run -t 1 "(+ 2 3)"`
 
