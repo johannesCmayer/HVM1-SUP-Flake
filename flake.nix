@@ -22,7 +22,7 @@
     in
     {
       packages = forEachSupportedSystem ({ pkgs }: rec {
-        default = hvm1-sup
+        default = hvm1-sup;
         hvm1-sup = pkgs.rustPlatform.buildRustPackage rec {
           pname = "hvm1-sup";
           version = "1.0.16";
