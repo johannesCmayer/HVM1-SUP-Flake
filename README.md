@@ -15,6 +15,12 @@ hvm1 run -d true -t 1 "((λg (g(g(λx x))))
                              (λw (h(w(λy y)))))))"
 ```
 
+To run the finding ADD-CARRY code do:
+```shell
+wget 'https://gist.githubusercontent.com/VictorTaelin/d5c318348aaee7033eb3d18b0b0ace34/raw/5055c1e17c54675d32a35245892a234333f8f194/fast_dps_add_carry.hvm1'
+hvm1 run -c true -t 1 -f fast_dps_add_carry.hvm1 "Main"
+```
+
 `-t 1` makes HVM use a single thread (There is a bug in the parallizer of HVM).
 
 See the [HVM1 guide](https://github.com/HigherOrderCO/HVM1/blob/dup_labels/guide/HOW.md) for more (have GPT read it and then try to understand the source code [here](https://gist.github.com/VictorTaelin/d5c318348aaee7033eb3d18b0b0ace34) by asking questions).
