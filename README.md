@@ -15,7 +15,7 @@ hvm1 run -d true -t 1 "((λg (g(g(λx x))))
                              (λw (h(w(λy y)))))))"
 ```
 
-To run the finding ADD-CARRY code do:
+To run the finding [ADD-CARRY code](https://gist.github.com/VictorTaelin/d5c318348aaee7033eb3d18b0b0ace34) do:
 ```shell
 wget 'https://gist.githubusercontent.com/VictorTaelin/d5c318348aaee7033eb3d18b0b0ace34/raw/5055c1e17c54675d32a35245892a234333f8f194/fast_dps_add_carry.hvm1'
 hvm1 run -c true -t 1 -f fast_dps_add_carry.hvm1 "Main"
