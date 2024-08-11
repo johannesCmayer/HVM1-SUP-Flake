@@ -23,4 +23,6 @@ hvm1 run -c true -t 1 -f fast_dps_add_carry.hvm1 "Main"
 
 `-t 1` makes HVM use a single thread (There is a bug in the parallizer of HVM).
 
+`-c true` makes HVM output performance statistics.
+
 See the [HVM1 guide](https://github.com/HigherOrderCO/HVM1/blob/dup_labels/guide/HOW.md) for more (have GPT read it and then try to understand the source code [here](https://gist.github.com/VictorTaelin/d5c318348aaee7033eb3d18b0b0ace34) by asking questions).
